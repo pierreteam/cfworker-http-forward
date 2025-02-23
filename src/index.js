@@ -5,7 +5,7 @@ export default {
      * @returns
      */
     async fetch(req, env) {
-        if (!!env.DEV && !checkSource(env, req.headers)) {
+        if (!checkSource(env, req.headers)) {
             return new Response(null, { status: 403, statusText: 'Forbidden' });
         }
 
