@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "types": ["@cloudflare/workers-types"],
+        "checkJs": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["**/*.js", "**/*.d.ts"],
+    "exclude": ["node_modules"]
+}
