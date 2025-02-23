@@ -13,11 +13,11 @@ export default {
         let path = url.pathname.replace(/^\/+/g, '');
 
         // 检查路径限制
-        if (env.ID) {
-            if (!path.startsWith(`${env.ID}/`)) {
+        if (env.TOKEN) {
+            if (!path.startsWith(`${env.TOKEN}/`)) {
                 return new Response(null, { status: 403, statusText: 'Forbidden' });
             }
-            path = path.slice(env.ID.length);
+            path = path.slice(env.TOKEN.length);
             path = path.replace(/^\/+/g, '');
         }
 
